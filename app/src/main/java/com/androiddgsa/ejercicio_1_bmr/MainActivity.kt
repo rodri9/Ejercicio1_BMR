@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                 .addToBackStack(null)
                 .commit()
         } else {
-            Toast.makeText(this, "NOOOOO", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.ingrese_los_datos_requeridos), Toast.LENGTH_LONG).show()
         }
     }
 
