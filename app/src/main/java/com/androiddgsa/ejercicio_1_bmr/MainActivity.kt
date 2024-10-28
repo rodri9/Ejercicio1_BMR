@@ -37,6 +37,11 @@ class MainActivity : AppCompatActivity() {
             showDatePickerDialog()
         }
 
+        val tf_Regreso = binding.etRegreso
+        tf_Regreso.setOnClickListener {
+            showDatePickerDialogRegreso()
+        }
+
         binding.bttnReservar.setOnClickListener {
             hacerReserva()
         }
@@ -164,5 +169,15 @@ class MainActivity : AppCompatActivity() {
     private fun onDateSelected(day: Int, month: Int, year: Int) {
         val selectedDate = day.toString() + '/' + (month + 1) + '/' + year
         binding.etSalida.setText(selectedDate)
+    }
+
+    private fun showDatePickerDialogRegreso() {
+        val datePicker = DatePickerFragmentRegreso{ day, month, year -> onDateSelectedRegreso(day, month, year) }
+        datePicker.show(supportFragmentManager, "datePicker")
+    }
+
+    private fun onDateSelectedRegreso(day: Int, month: Int, year: Int) {
+        val selectedDate = day.toString() + '/' + (month + 1) + '/' + year
+        binding.etRegreso.setText(selectedDate)
     }
 }
