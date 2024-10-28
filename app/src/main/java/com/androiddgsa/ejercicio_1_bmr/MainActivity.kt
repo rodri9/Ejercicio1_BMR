@@ -1,15 +1,16 @@
 package com.androiddgsa.ejercicio_1_bmr
 
 import android.os.Bundle
-import android.text.Editable
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.androiddgsa.ejercicio_1_bmr.databinding.ActivityMainBinding
-import android.text.TextWatcher
 import android.util.Patterns
-import androidx.core.view.isEmpty
-import androidx.core.widget.addTextChangedListener
+import androidx.compose.ui.semantics.text
+import com.androiddgsa.ejercicio_1_bmr.data.ReservaData
+import com.androiddgsa.ejercicio_1_bmr.fragments.DatePickerFragment
+import com.androiddgsa.ejercicio_1_bmr.fragments.DatePickerFragmentRegreso
+import com.androiddgsa.ejercicio_1_bmr.fragments.ReservaFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -61,8 +62,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hacerReserva() {
-        if (checkRequiredFields()) Toast.makeText(this, "AAAAA", Toast.LENGTH_LONG).show()
-        else Toast.makeText(this, "NOOOOO", Toast.LENGTH_LONG).show()
+        if (checkRequiredFields()) {
+            val reservaData = ReservaData(
+                binding.etNombres.text.toString(),
+                binding.etApellidos.text.toString(),
+                binding.etEmail.text.toString(),
+                binding.etOrigen.text.toString(),
+                binding.acDestino.text.toString(),
+                binding.etSalida.text.toString(),
+                binding.etRegreso.text.toString(),
+                binding.etNumero.text.toString()
+            )
+
+            val fragment = ReservaFragment.newInstance(reservaData)
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment) // Reemplaza con el ID de tu contenedor
+                .addToBackStack(null)
+                .commit()
+        } else {
+            Toast.makeText(this, "NOOOOO", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun nameFocusListener() {

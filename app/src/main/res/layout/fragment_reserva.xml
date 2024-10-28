@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ReservaFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvNombres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombres:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNombresValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                tools:text="Nombre del usuario"
+                app:layout_constraintStart_toEndOf="@+id/tvNombres"
+                app:layout_constraintTop_toTopOf="@+id/tvNombres" />
+
+            <TextView
+                android:id="@+id/tvApellidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Apellidos:"
+                app:layout_constraintStart_toStartOf="@+id/tvNombres"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombres" />
+
+            <TextView
+                android:id="@+id/tvApellidosValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                tools:text="Apellido del usuario"
+                app:layout_constraintStart_toEndOf="@+id/tvApellidos"
+                app:layout_constraintTop_toTopOf="@+id/tvApellidos" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Email:"
+                app:layout_constraintStart_toStartOf="@+id/tvApellidos"
+                app:layout_constraintTop_toBottomOf="@+id/tvApellidos" />
+
+            <TextView
+                android:id="@+id/tvEmailValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                tools:text="Correo del usuario"
+                app:layout_constraintStart_toEndOf="@+id/tvEmail"
+                app:layout_constraintTop_toTopOf="@+id/tvEmail" />
+
+            <TextView
+                android:id="@+id/tvOrigen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Origen:"
+                app:layout_constraintStart_toStartOf="@+id/tvEmail"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+            <TextView
+                android:id="@+id/tvOrigenValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                tools:text="Origen del viaje"
+                app:layout_constraintStart_toEndOf="@+id/tvOrigen"
+                app:layout_constraintTop_toTopOf="@+id/tvOrigen" />
+
+            <TextView
+                android:id="@+id/tvDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Destino:"
+                app:layout_constraintStart_toStartOf="@+id/tvOrigen"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrigen" />
+
+            <TextView
+                android:id="@+id/tvDestinoValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                tools:text="Destino del viaje"
+                app:layout_constraintStart_toEndOf="@+id/tvDestino"
+                app:layout_constraintTop_toTopOf="@+id/tvDestino" />
+
+            <TextView
+                android:id="@+id/tvFechaSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Fecha de Salida:"
+                app:layout_constraintStart_toStartOf="@+id/tvDestino"
+                app:layout_constraintTop_toBottomOf="@+id/tvDestino" />
+
+            <TextView
+                android:id="@+id/tvFechaSalidaValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                tools:text="Fecha de salida"
+                app:layout_constraintStart_toEndOf="@+id/tvFechaSalida"
+                app:layout_constraintTop_toTopOf="@+id/tvFechaSalida" />
+
+            <TextView
+                android:id="@+id/tvFechaRegreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Fecha de Regreso:"
+                app:layout_constraintStart_toStartOf="@+id/tvFechaSalida"
+                app:layout_constraintTop_toBottomOf="@+id/tvFechaSalida" />
+
+            <TextView
+                android:id="@+id/tvFechaRegresoValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                tools:text="Fecha de regreso"
+                app:layout_constraintStart_toEndOf="@+id/tvFechaRegreso"
+                app:layout_constraintTop_toTopOf="@+id/tvFechaRegreso" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

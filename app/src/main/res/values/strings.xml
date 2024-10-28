@@ -22,5 +22,8 @@
     <string name="requerido">Requerido</string>
     <string name="reservado">Reservado</string>
     <string name="main_activity_titulo">Reservación de Vuelo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ingrese_los_datos_requeridos">Ingrese los datos requeridos</string>
 
 </resources>
