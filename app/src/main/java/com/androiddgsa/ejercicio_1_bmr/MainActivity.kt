@@ -37,10 +37,6 @@ class MainActivity : AppCompatActivity() {
             showDatePickerDialog()
         }
 
-        if (checkRequiredFields()) {
-            binding.bttnReservar.isEnabled = true
-        } else binding.bttnReservar.isEnabled = false
-
         binding.bttnReservar.setOnClickListener {
             hacerReserva()
         }
@@ -51,11 +47,8 @@ class MainActivity : AppCompatActivity() {
         val validName = binding.tfNombres.helperText == null
         val validApellido = binding.tfApellidos.helperText == null
         val validEmail = binding.tfEmail.helperText == null
-        val validOrigen = binding.tfOrigen.helperText == null
-        val validDestino = binding.tfDestino.helperText == null
-        val validSalida = binding.tfSalida.helperText == null
 
-        if (validName && validApellido && validEmail && validOrigen && validDestino && validSalida) {
+        if (validName && validApellido && validEmail) {
             return true
         } else {
             return false
@@ -63,7 +56,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hacerReserva() {
-
+        if (checkRequiredFields()) Toast.makeText(this, "AAAAA", Toast.LENGTH_LONG).show()
+        else Toast.makeText(this, "NOOOOO", Toast.LENGTH_LONG).show()
     }
 
     private fun nameFocusListener() {
