@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Ejercicio_1 - BMR</string>
+    <string name="nombre_s">Nombre(s)</string>
+    <string name="apellido_s">Apellido(s)</string>
+    <string name="correo_electronico">Correo Electrónico</string>
+    <string name="no_viajero_frecuente">No. Viajero Frecuente</string>
+    <string name="fecha_salida">Fecha Salida</string>
+    <string name="fecha_regreso">Fecha Regreso</string>
+    <string name="destino">Selecciona un Destino</string>
+    <string name="origen">Origen</string>
+
+    <string-array name="opciones_destinos">
+        <item>Cancún</item>
+        <item>Ciudad de México</item>
+        <item>Guadalajara</item>
+        <item>Monterrey</item>
+        <item>Los Cabos</item>
+        <item>Tijuana</item>
+    </string-array>
+
+    <string name="reservar">Reservar</string>
+    <string name="requerido">Requerido</string>
+    <string name="reservado">Reservado</string>
+    <string name="main_activity_titulo">Reservación de Vuelo</string>
+
+</resources>
